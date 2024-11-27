@@ -31,11 +31,15 @@
                 <p class="par">The Career Development Course is a comprehensive program designed to equip individuals with <br> the skills, knowledge, and confidence needed to succeed in their professional journeys. <br> This course focuses on enhancing both hard and soft skills, guiding participants <br> through every aspect of career growth—from resume building to mastering workplace dynamics.</p>
                 <button class="cn"><a href="#">JOIN US</a></button>
 
+                <link rel="stylesheet" href="style.css">
+                <script src="valid.js"></script>
+
                 <div class="form">
                     <h2>Login Here</h2>
-                    <input type="email" name="email" placeholder="Enter Email Here">
-                    <input type="password" name="" placeholder="Enter Password Here">
-                    <button class="btn"><a href="#">Login</a></button>
+                    <input type="text" name="username" placeholder="Enter Username Here">
+                    <input type="password" name="" placeholder="Enter Password Here" id="pass" onclick="myfunction()">
+                    
+                    <input type="submit" name="" value="LOGIN" onclick="validate()">
 
                     <p class="link">Don't have an account<br>
                     <a href="#">Sign up </a> Here</a></p>
@@ -48,7 +52,9 @@
                         <a href="#"><ion-icon name="logo-google"></ion-icon></a>
                         <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
                     </div>
-
+                    <div>
+                        <p id="length"></p>
+                    </div>
                 </div>
                     <div>
                 </div>
