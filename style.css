@@ -520,6 +520,64 @@ ul li a:hover{
     .search{
         margin-top: -40px;
         margin-left: 38px;
-    } 
 
+    } 
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f4f7fc; /* Light background color */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Welcome container styling */
+.welcome-container {
+    text-align: center;
+    background-color: #ffffff; /* White background for the welcome box */
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 100%;
+    max-width: 500px; /* Maximum width to prevent stretching */
+}
+
+/* Header styling */
+.welcome-container h1 {
+    font-size: 2.5rem;
+    color: #333333; /* Dark gray for text */
+    margin-bottom: 20px; /* Space between the header and paragraph */
+}
+
+/* Paragraph styling */
+.welcome-container p {
+    font-size: 1.2rem;
+    color: #555555; /* Lighter gray for paragraph text */
+    line-height: 1.6;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 600px) {
+    .welcome-container h1 {
+        font-size: 2rem; /* Smaller font on mobile */
+    }
+    
+    .welcome-container p {
+        font-size: 1rem; /* Slightly smaller text */
+    }
+}
+
+.go-back-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.go-back-btn:hover {
+    background-color: #0056b3;
 }
