@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New page</title>
+    <title>Welcome to Aspire Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("goBackButton").addEventListener("click", function() {
+                // Replace "/your-path" with your desired path or URL
+                window.location.href = "/https://web-rho-one-82.vercel.app/#";
+            });
+        });
+    </script>
 </head>
 <body>
-    <h1>WELCOME TO OUR NEW PAGE</h1>
+    <div class="container">
+        <div id="welcomeMessage" class="welcome-container">
+            <h1>Hello User!,</h1>
+            <p>Welcome back to Aspire Academy! Ready to take the next step in your career?</p>
+            <button id="goBackButton" class="go-back-btn">Go Back to Dashboard</button>
+        </div>
+    </div>
 </body>
 </html>
