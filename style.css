@@ -159,18 +159,23 @@ ul li a:hover{
 }
 
 .form{
-    width: 250px;
-    height: 380px;
+    width: 240px;
+    padding: 15px;
     background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
     position: absolute;
     top: -20px;
     left: 870px;
-    border-radius: 10px;
-    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px white;
+    text-align: center;
+    display: flex; /* Flexbox for centering */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    gap: 15px; /* Space between items */
 }
 
 .form h2{
-    width: 220px;
+    width: 210px;
     font-family: sans-serif;
     text-align: center;
     color: rgb(255, 37, 135);
@@ -179,22 +184,49 @@ ul li a:hover{
     border-radius: 10px;
     margin: 2px;
     padding: 8px;
+    margin-bottom: 15px;
 }
 
-.form input{
-    width: 240px;
-    height: 35px;
+
+.form input[type="text"],
+.form input[type="password"] {
+    width: 90%; /* Full width with some padding */
+    margin: 5px auto; /* Space between fields */
+    padding: 10px; /* Space inside the input fields */
+    border: none;
+    border-bottom: 2px solid #ff0080;
     background: transparent;
-    border-bottom: 1px solid rgb(255, 37, 135);
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    color: #fff;
-    font-size: 15px;
-    letter-spacing: 1px;
-    margin-top: 30px;
-    font-family: sans-serif;
+    font-size: 16px;
+    display: block; /* Ensure block-level alignment */
+    outline: none;
+    text-align: center;
 }
+
+.form input[type="submit"] {
+    width: 90%;
+    padding: 10px;
+    background: #fff;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    display: inline-block; /* Ensure it centers properly */
+    margin: 0 auto; /* Center horizontally */
+}
+
+.form input[type="submit"]:hover {
+    background: #ff0080;
+}
+
+.form .icon {
+    display: flex;
+    justify-content: center; /* Align horizontally */
+    gap: 10px; /* Space between icons */
+    margin-top: 15px;
+}
+
 
 .form input:focus{
     outline: none;
@@ -350,8 +382,8 @@ ul li a:hover{
     }
     .form{
         margin-left: -30px;
-        width: 250px;
-        height: 370px;
+        width: 240px;
+        height: auto;
         background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
         position: absolute;
         top: 420px;
@@ -359,6 +391,7 @@ ul li a:hover{
         transform: translate(0%,-5%);
         border-radius: 10px;
         padding: 25px;
+        
     }
     .form input{
         width: 240px;
@@ -524,7 +557,7 @@ ul li a:hover{
     } 
 }
 
-body {
+body.container {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -552,7 +585,7 @@ body {
     background-color: #ffffff; /* White background for the welcome box */
     border-radius: 8px;
     padding: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-shadow: 0 4px 8px violet; /* Soft shadow */
     width: 100%;
     max-width: 500px; /* Maximum width to prevent stretching */
 }
@@ -560,14 +593,14 @@ body {
 /* Header styling */
 .welcome-container h1 {
     font-size: 2.5rem;
-    color: #333333; /* Dark gray for text */
+    color: #cc00ff; /* Dark gray for text */
     margin-bottom: 20px; /* Space between the header and paragraph */
 }
 
 /* Paragraph styling */
 .welcome-container p {
     font-size: 1.2rem;
-    color: #555555; /* Lighter gray for paragraph text */
+    color: #cc00ff; /* Lighter gray for paragraph text */
     line-height: 1.6;
 }
 
@@ -593,4 +626,266 @@ body {
 
 .go-back-btn:hover {
     background-color: #0056b3;
+}
+
+/* General Page Styles */
+.about-content, .contact-content, .services-content, .design-content {
+    text-align: center;
+    padding: 50px;
+}
+
+.about-content h1, .contact-content h1, .services-content h1, .design-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about-content p, .contact-content p, .services-content p, .design-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+button.cn a {
+    width: 240px;
+    height: 40px;
+    background: rgb(255, 37, 135);
+    border: none;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+
+button.cn a:hover {
+    background: #fff;
+    color: rgb(255, 37, 135);
+}
+
+/* Contact Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #00fbff;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background-color: rgb(188, 65, 255);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: rgb(188, 65, 255);
+}
+
+.contact-content {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.contact-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #ffcc00;
+}
+
+form button:active {
+    background-color: #e6a800;
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .navbar .menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar .menu ul li {
+        margin: 10px 0;
+    }
+
+    .contact-content {
+        padding: 20px;
+    }
+}
+
+/* Service Content Text */
+
+.service-content {
+    font-family: Arial, sans-serif;
+    line-height: 1.8; /* Global line height for all text */
+}
+
+.service-content h1 {
+    font-size: 36px;
+    line-height: 1.5;  /* Line spacing for main heading */
+    color: rgb(255, 37, 135);     /* Blue color for the heading */
+}
+
+.service-content h2 {
+    font-size: 28px;
+    line-height: 1.6;  /* Line spacing for subheading */
+    color: #ea49ff;     /* Orange color for subheading */
+}
+
+.service-content p {
+    font-size: 18px;
+    line-height: 1.8;  /* Line spacing for paragraphs */
+    color: white;    /* Dark gray color for paragraphs */
+}
+
+.service-content ul {
+    line-height: 1.7;   /* Line spacing for list items */
+}
+
+.service-content ul li {
+    font-size: 18px;
+    color: #ea49ff;    /* Medium gray color for list items */
+}
+
+/* Apply general reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the main container of the page */
+.main {
+    max-width: 1200px; /* You can adjust the max-width to your preference */
+    margin: 0 auto; /* Centers the main content horizontally */
+    padding: 20px;
+}
+
+/* Center the text content */
+.service-content {
+    text-align: center; /* Centers all text inside the service-content container */
+    margin-top: 50px; /* Adds some top margin */
+}
+
+.service-content .cn a{
+    background-color: rgb(255, 37, 135);
+}
+
+.about-content{
+    font-family: Arial, sans-serif;
+    line-height: 1.8; 
+}
+
+.about-content h1{
+    font-size: 36px;
+    line-height: 1.5;  /* Line spacing for main heading */
+    color: rgb(255, 37, 135);
+}
+
+.about-content h2{
+    font-size: 36px;
+    line-height: 1.5;  /* Line spacing for main heading */
+    color: rgb(255, 37, 135);
+}
+
+.about-content p{
+    font-size: 18px;
+    line-height: 1.8;  /* Line spacing for paragraphs */
+    color: white;  
+}
+
+.about-content ul{
+    line-height: 1.7;
+}
+
+.about-content ul li{
+    font-size: 18px;
+    color: #ea49ff;
+}
+
+.design-content h1{
+    font-size: 36px;
+    line-height: 1.5;  /* Line spacing for main heading */
+    color: rgb(255, 37, 135);
+}
+
+.design-content .cn a{
+    background-color: rgb(255, 37, 135);
+}
+
+.design-content p{
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ea49ff;
+}
+
+/* Target all input fields */
+input {
+    color: white; /* Change the text color to white */
+    caret-color: white; /* Change the cursor caret (blinking line) to white */
+    background-color: transparent; /* Optional: Ensure the input background is transparent or styled as needed */
+}
+
+/* If targeting specific fields, like username and password */
+input#username, input#password {
+    color: white; /* Ensure text color is white for these specific fields */
+    caret-color: white; /* Make caret visible and consistent */
 }
